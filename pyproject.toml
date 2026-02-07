@@ -1,0 +1,9 @@
+[project]
+name = "pt-data-merger"
+version = "0.1.0"
+description = "tool for merging config files from vs pt mod"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "mergedeep>=1.3.4",
+]
