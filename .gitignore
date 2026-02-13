@@ -117,4 +117,10 @@ dmypy.json
 # VSCODE IDE
 .vscode
 
-#Pycharm IDE
+# data
+data/*
+output/*
+test_data/*
+
+# temp
+**/tmp
