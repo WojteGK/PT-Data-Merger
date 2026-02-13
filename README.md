@@ -14,5 +14,3 @@ This script was created as a tool for Vintage Story mod named "Prospect Together
 `OUTPUT_PATH` - a path to the folder where the output .json will be placed. Please adjust permissions so the program can actually write data inside. Default: `"./output"`
 `OUTPUT_FILE_NAME` - Name of the output file. Leave default unless you know what you're doing. Default: `"prospectTogetherClient.json"`
 `JSON_VERSION` - Version of the json file. Leave default unless you know what you're doing. Default: `1`
-
-## About
