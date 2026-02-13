@@ -10,6 +10,10 @@ def main():
     if not os.listdir(FOLDER_WITH_DATA):
         print(f"[ERROR] Directory is empty. Please insert .json files into \
               {Path(FOLDER_WITH_DATA).absolute()} or change data path in config.")
+    if not os.listdir(OUTPUT_PATH):
+        print("[WARN] Output path doesn't exist. Creating...")
+        os.makedirs(OUTPUT_PATH)
+
     lookup = {}
     print("[INFO] Searching for files...")
     for file in os.listdir(FOLDER_WITH_DATA):
