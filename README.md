@@ -6,8 +6,12 @@ This script was created as a tool for Vintage Story mod named "Prospect Together
 
 ## Running:
 0. Adjust `config.py` if needed 
-1. Install uv: [Official installation site](https://docs.astral.sh/uv/getting-started/installation/)
-2. Run `uv run main.py`. The tool will handle .venv and deps by itself
+1. Insert all .json files that are supposed to be merged into data folder (specified as `FOLDER_WITH_DATA` in config) 
+2. Install uv: [Official installation site](https://docs.astral.sh/uv/getting-started/installation/)
+3. Run `uv run main.py`. The tool will handle .venv and deps by itself
+
+Alternatively instead of uv you can manually install [Python](https://www.python.org/downloads/).
+Tested, working python version: 3.13
 
 ## Config
 `FOLDER_WITH_DATA` - a path to the folder with .json files that should be merged. Default: `"./data"`
