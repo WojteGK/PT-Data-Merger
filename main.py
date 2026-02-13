@@ -4,6 +4,12 @@ from config import FOLDER_WITH_DATA, OUTPUT_PATH, OUTPUT_FILE_NAME,JSON_VERSION
 from pathlib import Path
 
 def main():
+    if not os.path.exists(FOLDER_WITH_DATA):
+        print(f"[WARN] Directory {Path(FOLDER_WITH_DATA).absolute()} doesn't exist. Creating...")
+        os.makedirs(FOLDER_WITH_DATA)
+    if not os.listdir(FOLDER_WITH_DATA):
+        print(f"[ERROR] Directory is empty. Please insert .json files into \
+              {Path(FOLDER_WITH_DATA).absolute()} or change data path in config.")
     lookup = {}
     print("[INFO] Searching for files...")
     for file in os.listdir(FOLDER_WITH_DATA):
@@ -11,7 +17,7 @@ def main():
         file_path = Path(FOLDER_WITH_DATA, file)
         if file_path.suffix.lower() != ".json":
             continue
-        print(f"[INFO] Found {file}.")
+        print(f"[INFO] Found {file}. Processing...")
         
         raw_data = None
         with open(file_path, "r") as f:
